@@ -31,11 +31,11 @@ export default function Home() {
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {siteConfig.services.map((svc) => (
+          {siteConfig.serviceCategories.map((cat) => (
             <ServiceCard
-              key={svc.title}
-              title={svc.title}
-              description={svc.description}
+              key={cat.category}
+              title={cat.category}
+              description={cat.description}
               href="/services"
             />
           ))}
