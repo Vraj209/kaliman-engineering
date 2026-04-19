@@ -63,14 +63,20 @@ export function SiteFooter() {
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm">
               <li>
-                <span className="text-text-on-dark/50 cursor-default">
+                <Link
+                  href="/privacy-policy"
+                  className="text-text-on-dark/80 transition-colors duration-200 hover:text-accent-bright"
+                >
                   Privacy Policy
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-text-on-dark/50 cursor-default">
+                <Link
+                  href="/terms-of-service"
+                  className="text-text-on-dark/80 transition-colors duration-200 hover:text-accent-bright"
+                >
                   Terms of Service
-                </span>
+                </Link>
               </li>
             </ul>
           </div>
