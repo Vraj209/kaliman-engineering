@@ -154,8 +154,8 @@ iframe {
   }
 }
 
-/* Hero gear illustration — gentle float (disabled when reduced motion) */
-@keyframes hero-gear-float {
+/* Hero precision illustration — gentle float (disabled when reduced motion) */
+@keyframes hero-precision-float {
   0%,
   100% {
     transform: translateY(0);
@@ -165,12 +165,12 @@ iframe {
   }
 }
 
-.hero-gear-visual {
-  animation: hero-gear-float 7s ease-in-out infinite;
+.hero-precision-visual {
+  animation: hero-precision-float 7s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-gear-visual {
+  .hero-precision-visual {
     animation: none;
   }
 }
