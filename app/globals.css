@@ -131,3 +131,24 @@ iframe {
     transition: none;
   }
 }
+
+/* Hero gear illustration — gentle float (disabled when reduced motion) */
+@keyframes hero-gear-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-gear-visual {
+  animation: hero-gear-float 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gear-visual {
+    animation: none;
+  }
+}

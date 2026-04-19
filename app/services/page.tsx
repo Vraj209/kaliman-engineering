@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { siteConfig, quoteMailto } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/section";
-import { ButtonLink } from "@/components/button-link";
 import { CtaBand } from "@/components/cta-band";
 
 export const metadata: Metadata = {

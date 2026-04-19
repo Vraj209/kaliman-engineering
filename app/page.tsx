@@ -20,7 +20,7 @@ export default function Home() {
       <Section id="services-preview">
         <div className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
-            // What We Do //
+            {"// What We Do //"}
           </p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight lg:text-4xl">
             Our Services
@@ -31,7 +31,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {siteConfig.services.map((svc, i) => (
+          {siteConfig.services.map((svc) => (
             <ServiceCard
               key={svc.title}
               title={svc.title}

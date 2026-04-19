@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { siteConfig, quoteMailto } from "@/lib/site-config";
 import { ButtonLink } from "./button-link";
+import { ContactPhones } from "./contact-phones";
 
 function MenuIcon({ open }: { open: boolean }) {
   return (
@@ -38,13 +39,10 @@ function MenuIcon({ open }: { open: boolean }) {
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [logoFailed, setLogoFailed] = useState(false);
   const pathname = usePathname();
 
   const close = useCallback(() => setMobileOpen(false), []);
-
-  useEffect(() => {
-    close();
-  }, [pathname, close]);
 
   useEffect(() => {
     if (mobileOpen) {
@@ -59,15 +57,26 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-surface">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <Link href="/" className="relative shrink-0" onClick={close}>
-          <Image
-            src={siteConfig.logo.src}
-            alt={siteConfig.logo.alt}
-            width={160}
-            height={80}
-            className="h-10 w-auto"
-            priority
-          />
+        <Link
+          href="/"
+          className="relative flex shrink-0 items-center"
+          onClick={close}
+        >
+          {logoFailed ? (
+            <span className="text-base font-bold tracking-tight text-foreground">
+              {siteConfig.company.shortName}
+            </span>
+          ) : (
+            <Image
+              src={siteConfig.logo.src}
+              alt={siteConfig.logo.alt}
+              width={160}
+              height={80}
+              className="h-10 w-auto"
+              priority
+              onError={() => setLogoFailed(true)}
+            />
+          )}
         </Link>
 
         {/* Desktop nav */}
@@ -127,7 +136,7 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <div className="mt-4">
+          <div className="mt-4 space-y-6">
             <ButtonLink
               href={quoteMailto()}
               variant="primary"
@@ -136,6 +145,12 @@ export function SiteHeader() {
             >
               Request a Quote
             </ButtonLink>
+            <div className="border-t border-border pt-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
+                Call us
+              </p>
+              <ContactPhones variant="onLight" className="mt-3" />
+            </div>
           </div>
         </nav>
       )}

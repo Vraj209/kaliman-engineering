@@ -39,16 +39,17 @@
 
 ## Service area
 
-- Primary: *[Update region from verified business address — e.g. city/state or service radius]*  
+- Primary: Anand, Gujarat, India (G.I.D.C. Estate, V.U. Nagar)  
 - Shipping: Per customer requirements (domestic / international as offered).  
 
 ## Contact (exact strings for site + mailto)
 
 | Channel | Value |
 |---------|--------|
-| **Email** | quotes@kali-engineering.example |
-| **Phone** | +1 (555) 010-0200 |
-| **Address** | *[Replace with address from Google Business Profile or official records]* |
+| **Email** | kalimalengineering@gmail.com |
+| **Phone** | +91 94286 47791 |
+| **Phone (Alt)** | +91 90339 72684 |
+| **Address** | C-444, Nr. Berger Paints, G.I.D.C. Estate, V.U. Nagar, Anand — 388121 |
 | **Hours** | *[Replace with verified hours]* |
 
 **Mailto subject (quote requests):** `Quote request — Kalimal Engineering`

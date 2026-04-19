@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig, quoteMailto } from "@/lib/site-config";
+import { ContactPhones } from "@/components/contact-phones";
 
 const currentYear = new Date().getFullYear();
 
@@ -44,24 +45,15 @@ export function SiteFooter() {
             <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
               Contact
             </p>
-            <ul className="mt-3 flex flex-col gap-2 text-sm">
-              <li>
-                <a
-                  href={quoteMailto()}
-                  className="text-text-on-dark/80 transition-colors duration-200 hover:text-accent-bright"
-                >
-                  {siteConfig.contact.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${siteConfig.contact.phoneTel}`}
-                  className="text-text-on-dark/80 transition-colors duration-200 hover:text-accent-bright"
-                >
-                  {siteConfig.contact.phoneDisplay}
-                </a>
-              </li>
-            </ul>
+            <div className="mt-3 flex flex-col gap-4 text-sm">
+              <a
+                href={quoteMailto()}
+                className="text-text-on-dark/80 transition-colors duration-200 hover:text-accent-bright"
+              >
+                {siteConfig.contact.email}
+              </a>
+              <ContactPhones variant="onDark" />
+            </div>
           </div>
 
           {/* Legal */}
