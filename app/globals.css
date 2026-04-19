@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens — Kalimal Engineering
+ *
+ * Sources:
+ *   docs/ui-ux.md § Logo-derived palette
+ *   docs/ui-ux.md § Color & typography (Manufact-aligned)
+ *   docs/ui-ux.md § Shape & radius (strict)
+ *
+ * Logo orange (#D94125) overrides Manufact-sampled accent where they conflict.
+ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ── Surfaces ─────────────────────────────────────────── */
+  --background: #f6f6f6;
+  --surface: #ffffff;
+  --surface-dark: #151515;
+  --surface-dark-alt: #191919;
+
+  /* ── Text ─────────────────────────────────────────────── */
+  --foreground: #151515;
+  --text-muted: #5c5c5c;
+  --text-subtle: #a7a3a2;
+  --text-on-dark: #ffffff;
+
+  /* ── Border ───────────────────────────────────────────── */
+  --border: #d1d1d1;
+
+  /* ── Brand accents (logo-derived — primary source) ───── */
+  --accent-brand-orange: #d94125;
+  --accent-brand-blue: #2d5e7e;
+
+  /* ── Accent scale (Manufact-sampled, supplemental) ───── */
+  --accent-primary: #c8370b;
+  --accent-bright: #f66234;
+  --accent-deep: #9e3211;
+
+  /* ── Radius (strict: 0 everywhere) ───────────────────── */
+  --radius: 0px;
 }
 
 @theme inline {
+  /* Surfaces */
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-dark-alt: var(--surface-dark-alt);
+
+  /* Text */
   --color-foreground: var(--foreground);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-text-on-dark: var(--text-on-dark);
+
+  /* Border */
+  --color-border: var(--border);
+
+  /* Brand accents (logo-derived) */
+  --color-accent-brand-orange: var(--accent-brand-orange);
+  --color-accent-brand-blue: var(--accent-brand-blue);
+
+  /* Accent scale */
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-deep: var(--accent-deep);
+
+  /* Radius */
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --radius-2xl: var(--radius);
+  --radius-3xl: var(--radius);
+  --radius-4xl: var(--radius);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ── Base resets ──────────────────────────────────────────── */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Smooth in-page anchor scrolling (Manufact-style) */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Strip border-radius globally on interactive/container elements */
+button,
+input,
+select,
+textarea,
+img,
+video,
+iframe {
+  border-radius: 0;
+}
+
+/* ── Scroll-reveal animations ────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

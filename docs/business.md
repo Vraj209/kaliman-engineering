@@ -6,10 +6,10 @@
 |--------|--------|
 | **Legal / brand name** | Kalimal Engineering |
 | **Also known as** | Kali Engineering (short form / repo name) |
-| **Tagline** | Job work and CNC services with effective, timely delivery |
-| **Elevator pitch** | Kalimal Engineering offers a full range of contract job work—CNC and VMC machining, lathe work, rings, and related precision work—with a focus on quality execution and dependable turnaround. |
+| **Tagline** | The best range of job work, CNC, VMC, lathe & rings — effective & timely delivery |
+| **Elevator pitch** | Kalimal Engineering offers the best range of contract job work—CNC and VMC machining, lathe work, rings, and related precision work—with effective, timely delivery and dependable execution. |
 
-**Public summary (aligned with [Google Business / Search listing](https://www.google.com/search?q=KALIMAL+ENGINEERING)):** Kalimal Engineering provides job work, CNC job work, ring work, VMC machine job work, CNC machining job work, and lathe machine job work, with effective and timely delivery.
+**Public summary (verbatim from [Google Search listing](https://www.google.com/search?q=KALIMAL+ENGINEERING&kgmid=/g/11txlr2xpk)):** Kalimal Engineering provides you the best range of job work, cnc job work, ring, vmc machine job work, cnc machining job work & lathe machine job work with effective & timely delivery.
 
 ## Services
 
@@ -28,7 +28,7 @@
 
 ## Differentiators
 
-- **Breadth of job work** — CNC, VMC, lathe, and ring-related work under one engagement model.  
+- **Best range of job work** — CNC, VMC, lathe, rings, and general job work under one engagement model (per public listing).  
 - **Effective & timely delivery** — Stated commitment to on-time completion (per public listing).  
 - **Partnership on job work** — Clear scope, realistic schedules, and communication on custom runs.  
 
@@ -55,7 +55,7 @@
 
 ## Social & web (optional)
 
-- **Google / discovery:** Business appears in Google Search under “Kalimal Engineering” (knowledge graph id `/g/11txlr2xpk` in indexed results).  
+- **Google / discovery:** Business appears in Google Search under “Kalimal Engineering”; listing is associated with knowledge graph id [`/g/11txlr2xpk`](https://www.google.com/search?q=KALIMAL+ENGINEERING&kgmid=/g/11txlr2xpk) (same entity as indexed search results).  
 - **LinkedIn:** *URL TBD*  
 - **No public storefront** — B2B inquiries by email or phone.  
 
