@@ -52,6 +52,7 @@ export const siteConfig = {
       services: [
         {
           slug: "cnc-job-work",
+          image: "/services/cnc-job-work.png",
           title: "CNC Job Work",
           description:
             "Programmed CNC production and prototypes per customer drawings. Tight tolerances, repeatable quality, and efficient turnaround on complex geometries.",
@@ -71,6 +72,7 @@ export const siteConfig = {
         },
         {
           slug: "cnc-machining",
+          image: "/services/cnc-machining-detail.png",
           title: "CNC Machining",
           description:
             "Multi-axis CNC machining for components and assemblies across a range of materials — aluminum, steel, brass, and engineering plastics.",
@@ -90,6 +92,7 @@ export const siteConfig = {
         },
         {
           slug: "cnc-prototyping",
+          image: "/services/cnc-prototyping.png",
           title: "CNC Prototyping",
           description:
             "Rapid CNC prototyping with fast turnaround. Design validation, iterative development, and material testing before committing to production.",
@@ -109,6 +112,7 @@ export const siteConfig = {
         },
         {
           slug: "precision-machining",
+          image: "/services/precision-machining.png",
           title: "Precision Machining",
           description:
             "Ultra-precision machining achieving tight tolerances for critical applications. CMM inspection and quality documentation available.",
@@ -128,6 +132,7 @@ export const siteConfig = {
         },
         {
           slug: "cnc-milling",
+          image: "/services/cnc-milling.png",
           title: "CNC Milling",
           description:
             "Multi-axis CNC milling for complex geometries, pockets, slots, and contoured surfaces. High-speed machining for improved surface finish.",
@@ -147,6 +152,7 @@ export const siteConfig = {
         },
         {
           slug: "cnc-turned-components",
+          image: "/services/cnc-turned-components.png",
           title: "CNC Turned Components",
           description:
             "CNC turning for cylindrical, conical, and rotational parts. Live tooling available for secondary operations in a single setup.",
@@ -174,6 +180,7 @@ export const siteConfig = {
       services: [
         {
           slug: "vmc-machine-job-work",
+          image: "/services/vmc-job-work.png",
           title: "VMC Machine Job Work",
           description:
             "Vertical machining center work for milling, drilling, and complex multi-axis features. Ideal for parts requiring precise surface finishing.",
@@ -193,6 +200,7 @@ export const siteConfig = {
         },
         {
           slug: "vmc-milling-drilling",
+          image: "/services/vmc-milling-drilling.png",
           title: "VMC Milling & Drilling",
           description:
             "Precision milling and drilling on VMC platforms for plates, blocks, housings, and structural components with tight hole-position accuracy.",
@@ -212,6 +220,7 @@ export const siteConfig = {
         },
         {
           slug: "vmc-complex-features",
+          image: "/services/vmc-complex-features.png",
           title: "VMC Complex Features",
           description:
             "Multi-axis VMC work for complex 3D contours, angular features, and multi-face machining in a single setup.",
@@ -239,6 +248,7 @@ export const siteConfig = {
       services: [
         {
           slug: "lathe-machine-job-work",
+          image: "/services/lathe-job-work.png",
           title: "Lathe Machine Job Work",
           description:
             "Turning, boring, and cylindrical machining on manual and CNC lathes. Reliable execution for shafts, bushings, and rotational components.",
@@ -258,6 +268,7 @@ export const siteConfig = {
         },
         {
           slug: "cnc-lathe-turning",
+          image: "/services/cnc-lathe-turning.png",
           title: "CNC Lathe Turning",
           description:
             "Programmed CNC lathe turning for high-precision cylindrical parts. Consistent quality and tight tolerances across production volumes.",
@@ -277,6 +288,7 @@ export const siteConfig = {
         },
         {
           slug: "manual-lathe-work",
+          image: "/services/manual-lathe-work.png",
           title: "Manual Lathe Work",
           description:
             "Conventional lathe operations for one-off parts, repairs, and low-volume work where flexibility and quick turnaround matter.",
@@ -304,6 +316,7 @@ export const siteConfig = {
       services: [
         {
           slug: "general-job-work",
+          image: "/services/general-job-work.png",
           title: "Job Work (General)",
           description:
             "Contract manufacturing and custom job work across agreed specifications. We handle diverse requirements under a single engagement model.",
@@ -323,6 +336,7 @@ export const siteConfig = {
         },
         {
           slug: "rings-ring-components",
+          image: "/services/rings-components.png",
           title: "Rings & Ring Components",
           description:
             "Ring-type components and related precision parts manufactured to specification. Custom dimensions and materials as per requirements.",
@@ -342,6 +356,7 @@ export const siteConfig = {
         },
         {
           slug: "custom-precision-parts",
+          image: "/services/custom-precision-parts.png",
           title: "Custom Precision Parts",
           description:
             "Bespoke precision components machined to your drawings and tolerances. From simple brackets to complex multi-feature assemblies.",
