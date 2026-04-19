@@ -152,3 +152,42 @@ iframe {
     animation: none;
   }
 }
+
+/* ── Prose typography for legal pages ───────────────────── */
+
+.prose-custom h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.prose-custom h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.prose-custom p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.prose-custom ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.prose-custom ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.prose-custom h2:first-child {
+  margin-top: 0;
+}
