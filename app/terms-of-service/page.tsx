@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: `Terms of service for ${siteConfig.company.legalName} — conditions governing use of our website and services.`,
 };
 
-const LAST_UPDATED = "April 19, 2026";
+const LAST_UPDATED = "April 19, 2025";
 
 export default function TermsOfServicePage() {
   const company = siteConfig.company.legalName;

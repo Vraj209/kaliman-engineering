@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: `Privacy policy for ${siteConfig.company.legalName} — how we collect, use, and protect your information.`,
 };
 
-const LAST_UPDATED = "April 19, 2026";
+const LAST_UPDATED = "April 19, 2025";
 
 export default function PrivacyPolicyPage() {
   const company = siteConfig.company.legalName;
