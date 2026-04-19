@@ -132,6 +132,28 @@ iframe {
   }
 }
 
+/* ── Capabilities marquee (infinite scroll) ─────────────── */
+
+@keyframes capabilities-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.capabilities-marquee {
+  animation: capabilities-scroll 38s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capabilities-marquee {
+    animation: none;
+  }
+}
+
 /* Hero gear illustration — gentle float (disabled when reduced motion) */
 @keyframes hero-gear-float {
   0%,

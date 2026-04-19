@@ -55,8 +55,8 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section className="relative overflow-hidden bg-surface-dark text-text-on-dark">
         <div className="absolute inset-0">
           <Image
-            src={category.image}
-            alt={category.category}
+            src={service.image}
+            alt={service.title}
             fill
             className="object-cover opacity-30"
             sizes="100vw"
@@ -177,7 +177,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
           <div className="overflow-hidden border border-border">
             <Image
-              src={category.image}
+              src={service.image}
               alt={service.title}
               width={800}
               height={450}

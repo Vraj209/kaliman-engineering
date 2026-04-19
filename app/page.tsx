@@ -1,58 +1,38 @@
-import { quoteMailto, siteConfig } from "@/lib/site-config";
-import { ButtonLink } from "@/components/button-link";
-import { Section } from "@/components/section";
-import { ServiceCard } from "@/components/service-card";
 import { HeroSection } from "@/components/hero";
-import { TrustStrip } from "@/components/trust-strip";
-import { IndustriesSection } from "@/components/industries";
+import { AboutIntro } from "@/components/about-intro";
+import { ServicesShowcase } from "@/components/services-showcase";
+import { CapabilitiesMarquee } from "@/components/capabilities-marquee";
+import { ManufactureShowcase } from "@/components/manufacture-showcase";
 import { CtaBand } from "@/components/cta-band";
+import { IndustriesSection } from "@/components/industries";
+import { WhyChooseUs } from "@/components/why-choose-us";
 
 export default function Home() {
   return (
     <>
-      {/* 1 ─ Hero */}
+      {/* 01 — Hero: dark, gear visual, SINCE badge, scroll indicator */}
       <HeroSection />
 
-      {/* 2 ─ Trust strip */}
-      <TrustStrip />
+      {/* 02 — Who we are: driven by precision, stats band */}
+      <AboutIntro />
 
-      {/* 3 ─ Services preview */}
-      <Section id="services-preview">
-        <div className="mb-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
-            {"// What We Do //"}
-          </p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight lg:text-4xl">
-            Our Services
-          </h2>
-          <p className="mt-3 max-w-2xl text-text-muted">
-            From precision CNC machining to custom contract work — we deliver
-            quality parts on schedule, every time.
-          </p>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {siteConfig.serviceCategories.map((cat) => (
-            <ServiceCard
-              key={cat.category}
-              title={cat.category}
-              description={cat.description}
-              href="/services"
-            />
-          ))}
-        </div>
-        <div className="mt-10 flex gap-4">
-          <ButtonLink href="/services" variant="secondary">
-            View All Services
-          </ButtonLink>
-          <ButtonLink href={quoteMailto()}>Request a Quote</ButtonLink>
-        </div>
-      </Section>
+      {/* 03 — What we do: 4-card services showcase */}
+      <ServicesShowcase />
 
-      {/* 4 ─ Industries */}
+      {/* 04 — Capabilities marquee (industrial scroll) */}
+      <CapabilitiesMarquee />
+
+      {/* 05 — What we manufacture: 50k+ parts, product-spec grid */}
+      <ManufactureShowcase />
+
+      {/* 06 — Ready to start your next project (orange CTA) */}
+      <CtaBand />
+
+      {/* 07 — Built for industry (vertical stacked list) */}
       <IndustriesSection />
 
-      {/* 5 ─ CTA band */}
-      <CtaBand />
+      {/* 08 — Why choose us (checklist + gauge visual) */}
+      <WhyChooseUs />
     </>
   );
 }
