@@ -2,7 +2,7 @@
 
 import { quoteMailto, siteConfig } from "@/lib/site-config";
 import { ButtonLink } from "./button-link";
-import { HeroGearVisual } from "./hero-gear-visual";
+import { HeroPrecisionVisual } from "./hero-precision-visual";
 import { Reveal } from "./reveal";
 
 export function HeroSection() {
@@ -94,9 +94,9 @@ export function HeroSection() {
           </Reveal>
         </div>
 
-        {/* Right — gear visual */}
+        {/* Right — isometric technical visual */}
         <Reveal delay={140} className="relative flex justify-center lg:justify-end">
-          <HeroGearVisual />
+          <HeroPrecisionVisual />
         </Reveal>
       </div>
 
