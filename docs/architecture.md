@@ -7,6 +7,7 @@
 | Framework | **Next.js** (App Router) |
 | Language | **TypeScript** |
 | Styling | **Tailwind CSS** v4 (as shipped by `create-next-app`) or v3 — match repo after scaffold |
+| Motion (optional) | **Framer Motion** — scroll reveals, stagger, hovers aligned with [`docs/ui-ux.md`](ui-ux.md) / Manufact reference; lighter path: CSS + `IntersectionObserver` |
 | Linting | **ESLint** (Next.js preset) |
 | Package manager | **npm** (or align with lockfile in repo) |
 
@@ -33,7 +34,7 @@ kali-engineering/
 ├── lib/
 │   └── site-config.ts      # Nav, company strings, mailto builders (sync with docs/business.md)
 ├── docs/                   # Specs — not bundled into Next.js build
-├── public/                 # favicon, static assets
+├── public/                 # Static assets; official logo: logo-image.jpeg → /logo-image.jpeg
 ├── package.json
 ├── next.config.ts
 ├── tsconfig.json
