@@ -39,7 +39,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "/",
     siteName: siteConfig.company.legalName,
+    title: `${siteConfig.company.legalName} — Precision CNC, VMC & Lathe Job Work`,
+    description: siteConfig.elevatorPitch,
+  },
+  twitter: {
+    card: "summary_large_image",
     title: `${siteConfig.company.legalName} — Precision CNC, VMC & Lathe Job Work`,
     description: siteConfig.elevatorPitch,
   },

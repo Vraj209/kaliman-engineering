@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig, quoteMailto, telHref } from "@/lib/site-config";
+import { siteConfig, quoteMailto } from "@/lib/site-config";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/section";
 import { ButtonLink } from "@/components/button-link";
@@ -18,6 +18,21 @@ export const metadata: Metadata = {
     description: `Contact ${siteConfig.company.legalName} for quotes and job work inquiries.`,
   },
 };
+
+const phoneIcon = (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="square"
+    aria-hidden="true"
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
+  </svg>
+);
 
 const contactBlocks = [
   {
@@ -40,25 +55,12 @@ const contactBlocks = [
       </svg>
     ),
   },
-  {
-    label: "Phone",
-    value: siteConfig.contact.phoneDisplay,
-    href: telHref(),
-    icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="square"
-        aria-hidden="true"
-      >
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
-      </svg>
-    ),
-  },
+  ...siteConfig.contact.phones.map((phone) => ({
+    label: phone.label,
+    value: phone.display,
+    href: `tel:${phone.tel}`,
+    icon: phoneIcon,
+  })),
   {
     label: "Address",
     value: siteConfig.contact.address,
@@ -160,12 +162,50 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      {/* Map placeholder */}
+      {/* Map */}
       <Section className="bg-surface">
-        <div className="border border-dashed border-border bg-background p-10 text-center">
-          <p className="text-text-subtle">
-            Map embed coming soon — once the verified address is confirmed.
+        <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
+          {"// Find Us //"}
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+          Our Location
+        </h2>
+        <div className="mt-6 overflow-hidden border border-border">
+          <iframe
+            title="Kalimal Engineering location on Google Maps"
+            src="https://maps.google.com/maps?q=C-444,+Nr.+Berger+Paints,+G.I.D.C.+Estate,+V.U.+Nagar,+Anand+388121,+Gujarat,+India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
+          <p className="text-sm text-text-muted">
+            {siteConfig.contact.address}
           </p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=C-444+Nr+Berger+Paints+GIDC+Estate+VU+Nagar+Anand+388121"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm font-medium text-accent-brand-orange underline underline-offset-4 transition-colors duration-200 hover:text-accent-deep"
+          >
+            Open in Google Maps
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="square"
+              aria-hidden="true"
+            >
+              <path d="M1 13 13 1M13 1H5M13 1v8" />
+            </svg>
+          </a>
         </div>
       </Section>
     </>

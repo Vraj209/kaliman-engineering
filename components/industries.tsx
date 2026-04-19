@@ -11,7 +11,7 @@ export function IndustriesSection() {
         <Reveal>
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
-              // Industries Served //
+              {"// Industries Served //"}
             </p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight lg:text-4xl">
               Built for Industry

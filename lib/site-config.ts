@@ -23,13 +23,21 @@ export const siteConfig = {
   elevatorPitch:
     "Kalimal Engineering offers the best range of contract job work — CNC and VMC machining, lathe work, rings, and related precision work — with effective, timely delivery and dependable execution.",
   contact: {
-    email: "quotes@kali-engineering.example",
-    phoneDisplay: "+1 (555) 010-0200",
-    /** E.164-style for `tel:` */
-    phoneTel: "+15550100200",
-    /** Placeholder until verified (see business.md) */
-    address: "Address TBD — update from Google Business Profile",
-    /** Placeholder until verified (see business.md) */
+    email: "kalimalengineering@gmail.com",
+    phones: [
+      {
+        label: "Phone",
+        display: "+91 94286 47791",
+        tel: "+919428647791",
+      },
+      {
+        label: "Phone (Alt)",
+        display: "+91 90339 72684",
+        tel: "+919033972684",
+      },
+    ],
+    address:
+      "C-444, Nr. Berger Paints, G.I.D.C. Estate, V.U. Nagar, Anand — 388121",
     hours: "Hours TBD — update from verified records",
   },
   mailto: {
@@ -137,6 +145,7 @@ export function quoteMailto(): string {
   return `mailto:${siteConfig.contact.email}?${params.toString()}`;
 }
 
-export function telHref(): string {
-  return `tel:${siteConfig.contact.phoneTel}`;
+/** tel: link for the primary phone number */
+export function telHref(index = 0): string {
+  return `tel:${siteConfig.contact.phones[index].tel}`;
 }

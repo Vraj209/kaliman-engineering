@@ -32,7 +32,7 @@ export default function AboutPage() {
       {/* Values / differentiators */}
       <Section>
         <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
-          // Why Work With Us //
+          {"// Why Work With Us //"}
         </p>
         <h2 className="mt-2 text-2xl font-semibold tracking-tight lg:text-3xl">
           What Sets Us Apart
@@ -57,7 +57,7 @@ export default function AboutPage() {
       {/* Facility / team placeholder */}
       <Section className="bg-surface">
         <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle">
-          // Our Facility //
+          {"// Our Facility //"}
         </p>
         <h2 className="mt-2 text-2xl font-semibold tracking-tight lg:text-3xl">
           Facility &amp; Team
