@@ -24,35 +24,6 @@ export function ContactHero() {
             </p>
           </Reveal>
 
-          {/* Manufact-style button: dark pill + orange arrow box */}
-          <Reveal delay={120}>
-            <div className="mt-10">
-              <a
-                href={quoteMailto()}
-                className="group inline-flex items-stretch"
-              >
-                <span className="flex items-center bg-surface-dark px-6 py-3.5 text-sm font-semibold tracking-wide text-text-on-dark transition-colors duration-200 group-hover:bg-foreground">
-                  Download Brochure
-                </span>
-                <span className="flex w-12 items-center justify-center bg-accent-brand-orange text-white transition-colors duration-200 group-hover:bg-accent-deep">
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="square"
-                    aria-hidden="true"
-                    className="transition-transform duration-200 group-hover:translate-x-0.5"
-                  >
-                    <path d="M4 9h10M10 5l4 4-4 4" />
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </Reveal>
-
           {/* ── Bottom: contact info ── */}
           <Reveal delay={180}>
             <div className="mt-auto pt-16 lg:pt-24">
